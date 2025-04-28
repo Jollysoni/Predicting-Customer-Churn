@@ -1,94 +1,40 @@
-# PowerCo Customer Churn Prediction
+#PowerCo Customer Churn Prediction Project
 
-## Overview
+##Introduction
 
-This project was completed as part of the **Boston Consulting Group (BCG) x Forage Job Simulation Program**.  
-In this simulation, I worked as a **Junior Data Scientist**, tasked with diagnosing customer churn and building predictive models to help PowerCo — a simulated major energy utility provider — retain their SME clients.
+This project was completed as part of the **BCG x Forage Virtual Job Simulation**.  
+I worked in the role of a **Junior Data Scientist**, analyzing customer churn for PowerCo, a major simulated utility provider for small and medium-sized enterprises (SMEs).
 
----
-
-## Project Context
-
-- **Simulation Objective**: Replicate real-world data science work at a consulting firm.
-- **Client (Simulated)**: PowerCo — a leading electricity and gas provider.
-- **Business Problem**: Rising customer churn amid growing market competition.
-- **Your Role**: Junior Data Scientist at BCG, assisting in diagnosing churn and proposing predictive solutions.
+The goal was to:
+- Diagnose reasons for customer churn.
+- Build a predictive model to identify at-risk customers.
+- Recommend actions based on the findings.
 
 ---
 
-## Hypothesis
+##Key Highlights
 
-The primary hypothesis explored was that **price sensitivity** is the most influential factor behind customer churn.
-
-**Initial observations**:
-- Churn is relatively rare, affecting approximately **10%** of the customer base.
-- A significant **class imbalance** exists between stayers and churners.
-
----
-
-## Data Description
-
-The dataset includes:
-- Customer contract details
-- Pricing information
-- Usage patterns
-- Engineered features relevant to customer decision behavior
+- **Churn Rate**: 9.7% across approximately 14,600 customers.
+- **Model Used**: Random Forest Classifier with 800 estimators and balanced class weights.
+- **Key Findings**:
+  - Churn prediction is possible, but **price sensitivity is not the main driver**.
+  - **Top churn drivers**: yearly consumption, forecasted consumption, and net margin.
+  - **Discount strategies** can be effective if targeted at **high-value, high-risk customers**.
 
 ---
 
-## Methodology
+##What I Learned
 
-### Feature Engineering
-- Created new features based on historical usage, pricing contracts, and customer profiles.
-
-### Modeling
-- Algorithm: **Random Forest Classifier**
-- Parameters:
-  - `n_estimators=800`
-  - `class_weight='balanced'`
-- Data split: 75% training, 25% testing
-
-### Evaluation Metrics
-- Accuracy
-- Precision
-- Recall
-- F1-Score
-- Special focus on **recall for churners** (Class 1).
+- Importance of handling **imbalanced datasets** when churn events are rare.
+- Why **recall for churners** is more important than overall accuracy in churn models.
+- How to apply **feature engineering** to improve model performance.
+- Practical experience adjusting **prediction thresholds** to improve recall.
+- Translating model outputs into **business recommendations** for client action.
 
 ---
 
-## Key Results
+##Acknowledgment
 
-| Metric | Stayed (Class 0) | Churned (Class 1) |
-|:--|:--|:--|
-| Precision | 91% | 88% |
-| Recall | 100% | 6% |
-| F1-Score | 0.95 | 0.11 |
-
-- **Overall model accuracy**: ~90.5%
-- Strong ability to predict customers who stayed.
-- Limited ability to identify customers who churned, due to extreme class imbalance.
+This project was developed as part of the **Boston Consulting Group (BCG) x Forage Job Simulation** and is based on a simulated client scenario for educational purposes.
 
 ---
-
-## Conclusion
-
-- The model excels in predicting customer retention.
-- Class imbalance significantly impacts churner recall (~6%).
-- Accuracy alone is not a sufficient evaluation metric for churn prediction.
-- Future work should prioritize improving recall to capture more at-risk customers.
-
----
-
-## Recommendations
-
-- **Lower the prediction threshold** to improve recall for churners.
-- **Enhance feature engineering** focused on dissatisfaction and competitive behavior.
-- **Retrain models periodically** to adapt to evolving market dynamics.
-- Consider **resampling techniques** or **alternative ensemble methods** for further improvement.
-
----
-
-## Project Structure
-
-
