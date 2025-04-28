@@ -1,6 +1,6 @@
-#PowerCo Customer Churn Prediction Project
+# PowerCo Customer Churn Prediction Project
 
-##Introduction
+## Introduction
 
 This project was completed as part of the **BCG x Forage Virtual Job Simulation**.  
 I worked in the role of a **Junior Data Scientist**, analyzing customer churn for PowerCo, a major simulated utility provider for small and medium-sized enterprises (SMEs).
@@ -12,7 +12,7 @@ The goal was to:
 
 ---
 
-##Key Highlights
+## Key Highlights
 
 - **Churn Rate**: 9.7% across approximately 14,600 customers.
 - **Model Used**: Random Forest Classifier with 800 estimators and balanced class weights.
@@ -23,7 +23,7 @@ The goal was to:
 
 ---
 
-##What I Learned
+## What I Learned
 
 - Importance of handling **imbalanced datasets** when churn events are rare.
 - Why **recall for churners** is more important than overall accuracy in churn models.
@@ -33,7 +33,7 @@ The goal was to:
 
 ---
 
-##Acknowledgment
+## Acknowledgment
 
 This project was developed as part of the **Boston Consulting Group (BCG) x Forage Job Simulation** and is based on a simulated client scenario for educational purposes.
 
