@@ -1,1 +1,94 @@
+# PowerCo Customer Churn Prediction
+
+## Overview
+
+This project was completed as part of the **Boston Consulting Group (BCG) x Forage Job Simulation Program**.  
+In this simulation, I worked as a **Junior Data Scientist**, tasked with diagnosing customer churn and building predictive models to help PowerCo — a simulated major energy utility provider — retain their SME clients.
+
+---
+
+## Project Context
+
+- **Simulation Objective**: Replicate real-world data science work at a consulting firm.
+- **Client (Simulated)**: PowerCo — a leading electricity and gas provider.
+- **Business Problem**: Rising customer churn amid growing market competition.
+- **Your Role**: Junior Data Scientist at BCG, assisting in diagnosing churn and proposing predictive solutions.
+
+---
+
+## Hypothesis
+
+The primary hypothesis explored was that **price sensitivity** is the most influential factor behind customer churn.
+
+**Initial observations**:
+- Churn is relatively rare, affecting approximately **10%** of the customer base.
+- A significant **class imbalance** exists between stayers and churners.
+
+---
+
+## Data Description
+
+The dataset includes:
+- Customer contract details
+- Pricing information
+- Usage patterns
+- Engineered features relevant to customer decision behavior
+
+---
+
+## Methodology
+
+### Feature Engineering
+- Created new features based on historical usage, pricing contracts, and customer profiles.
+
+### Modeling
+- Algorithm: **Random Forest Classifier**
+- Parameters:
+  - `n_estimators=800`
+  - `class_weight='balanced'`
+- Data split: 75% training, 25% testing
+
+### Evaluation Metrics
+- Accuracy
+- Precision
+- Recall
+- F1-Score
+- Special focus on **recall for churners** (Class 1).
+
+---
+
+## Key Results
+
+| Metric | Stayed (Class 0) | Churned (Class 1) |
+|:--|:--|:--|
+| Precision | 91% | 88% |
+| Recall | 100% | 6% |
+| F1-Score | 0.95 | 0.11 |
+
+- **Overall model accuracy**: ~90.5%
+- Strong ability to predict customers who stayed.
+- Limited ability to identify customers who churned, due to extreme class imbalance.
+
+---
+
+## Conclusion
+
+- The model excels in predicting customer retention.
+- Class imbalance significantly impacts churner recall (~6%).
+- Accuracy alone is not a sufficient evaluation metric for churn prediction.
+- Future work should prioritize improving recall to capture more at-risk customers.
+
+---
+
+## Recommendations
+
+- **Lower the prediction threshold** to improve recall for churners.
+- **Enhance feature engineering** focused on dissatisfaction and competitive behavior.
+- **Retrain models periodically** to adapt to evolving market dynamics.
+- Consider **resampling techniques** or **alternative ensemble methods** for further improvement.
+
+---
+
+## Project Structure
+
 
